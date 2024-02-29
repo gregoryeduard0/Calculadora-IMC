@@ -1,0 +1,182 @@
+@font-face {
+    font-family: fonte1;
+    src: url(Nexa-Heavy.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 22px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: fonte1;
+}
+
+input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
+button {
+
+    padding: 15px 20px;
+    margin-right: 10px;
+    min-width: 120px;
+    font-weight: bold;
+}
+
+.calcular-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: fonte1;
+}
+
+.limpar-button {
+    background-color: #ff5202;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: fonte1;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 26px;
+    font-family: fonte1;
+}
+
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 22px;
+    border-radius: 8px;
+
+}
+
+
+.container h2 {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #1f5eaf;
+    font-weight: 700;
+    font-family: fonte1;
+
+}
+
+.container h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #1f5eaf;
+    margin: 5 auto;
+    transition: width 0.5s;
+}
+
+.container h2:hover::after {
+    width: 50%;
+}
+
+
+.container p {
+    margin: 0 0 30px;
+    color: #707070;
+    font-family: fonte1;
+}
+
+p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+span {
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.imc-tabela {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%
+}
+
+.imc-tabela th,
+.imc-tabela td {
+    border-top: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #707070;
+    font-weight: bold;
+}
+
+.imc-tabela th {
+    background-color: #f2f2f2;
+    color: #1f5eaf;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.imc-tabela th span {
+    font-size: 11px;
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+}
+
+
+.resultado-button {
+    padding: 20px;
+    background-color: #ff5202;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 16px;
+    font-family: fonte1;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn p {
+    color: #707070;
+    font-family: fonte1;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indice de massa corporal</title>
+</head>
+
+<body>
+
+    <h1>IMC - Indice de massa corporal</h1>
+
+    <div class="container">
+        <h2>Cálculo IMC</h2>
+        <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para
+            calcular o
+            peso ideal de cada pessoa.
+        </p>
+        <p>
+            O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado.
+            Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.
+        </p>
+        <p>
+            Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela.
+            Importante: siga os exemplos e use pontos como separadores.
+        </p>
+    </div>
+
+    <form action="">
+        <label for="altura">Altura: </label>
+        <input type="number" name="" id="altura">
+        <br>
+
+        <label for="peso">Peso (Kg)</label>
+        <input type="number" name="" id="peso" maxlength="4">
+        <br>
+
+        <div class="buttons">
+        <button id="calcular-button" class="calcular-button" onclick="calcularImc()"> Calcular
+            IMC</button>
+
+
+        <button id="limpar-button" class="limpar-button" onclick="limparCampos()"> Limpar </button>
+        <br>
+    </div>
+
+
+
+    </form>
+
+    <div class="btn">
+        <button id="resultado" class="resultado-button">Seu IMC:</button>
+        <p> <span id="mensagem">Classificação:</span></p>
+    </div>
+
+
+
+
+    <script>
+        function calcularImc() {
+            const peso = document.getElementById('peso').value;
+            const altura = document.getElementById('altura').value;
+            const imc = peso / (altura ** 2);
+            document.getElementById('resultado').textContent = imc.toFixed(2);
+
+            var classificação = "";
+
+            if (imc < 18.5) {
+                classificação = "Magreza";
+            }
+
+            if (imc > 18.5) {
+                classificação = "Normal";
+            }
+
+            if (imc > 25.0) {
+                classificação = "Sobrepeso I";
+            }
+
+            if (imc > 30.0) {
+                classificação = "Obesidade II";
+            }
+
+            if (imc > 40.0) {
+                classificação = "Obesidade III";
+            } document.getElementById("mensagem").textContent = classificação;
+
+        }
+
+        function limparCampos() {
+
+            document.getElementById('altura').value = "";
+            document.getElementById('peso').value = "";
+
+
+            document.getElementById('resultado').textContent = "";
+
+
+        }
+
+
+
+    </script>
+
+
+    <div class="caixa">
+        <table class="imc-tabela">
+            <thead>
+                <tr>
+                    <th>IMC</th>
+                    <th>Classificação</th>
+                    <th>Obesidade <span>(Grau)</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Menor que 18,5</td>
+                    <td>Magreza</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Entre 18,5 - 24,9</td>
+                    <td>Normal</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Entre 25 - 29,9</td>
+                    <td>Sobrepeso</td>
+                    <td>I</td>
+                </tr>
+                <tr>
+                    <td>Entre 30 - 34,9</td>
+                    <td>Obesidade</td>
+                    <td>II</td>
+                </tr>
+                <tr>
+                    <td>Maior que 40,0</td>
+                    <td>Obesidade grave</td>
+                    <td>III</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
